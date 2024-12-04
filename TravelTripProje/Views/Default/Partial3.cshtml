@@ -1,0 +1,13 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+@{ int count = 0; }
+
+<h4>En Sevilen 10 Blog</h4>
+<ul class="list list-pad">
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <li class="list-bg"><span>@count.</span><a href="/Blog/BlogDetay/@item.Id">@item.Baslik</a></li>
+    }
+</ul>

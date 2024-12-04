@@ -1,6 +1,6 @@
-﻿@using TravelTripProje.Models.Siniflar
-@model List<Blog>
-@*@model List<TravelTripProje.Models.Siniflar.Blog>*@
+﻿@*@using TravelTripProje.Models.Siniflar
+    @model List<Blog>*@
+@model TravelTripProje.Models.Siniflar.BlogYorum
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -43,15 +43,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-8 single-main">
 
-                @foreach (var item in Model)
+                @foreach (var item in Model.Deger1)
                 {
                     <div class="single-grid">
-                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px"/>
+                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
                         <a href="/Blog/BlogDetay/@item.Id">@item.Baslik</a>
                         <p>
                             @item.Aciklama
                         </p>
-                        <p>Yayınlanma Tarihi : @item.Tarih </p>
+                        <p>Yayınlanma Tarihi : @item.Tarih.ToShortDateString() </p>
                         <br />
                     </div>
                 }
@@ -60,21 +60,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
             <div class="col-md-4 side-content">
                 <div class="recent">
-                    <h3>SON BLOGLAR</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
-                    </ul>
+                    <h3><strong> SON EKLENEN BLOGLAR </strong></h3>
+                    @foreach (var item in Model.Deger3)
+                    {
+                        <ul>
+                            <li style="margin-bottom:5px"><a href="/Blog/BlogDetay/@item.Id"><strong> @item.Baslik</strong></a></li>
+                            <img src="@item.BlogImage" alt="" width="200" height="100"  />
+                            <li>
+                                <span style="font-size: 12px; color: gray;">Tarih: @item.Tarih.ToShortDateString()</span>
+                            </li>
+                        </ul>
+                        <br />
+                    }
+
                 </div>
                 <div class="comments">
-                    <h3>SON YORUMLAR</h3>
-                    <ul>
-                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
-                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
-                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
-                    </ul>
+                    <h3><strong> YORUMLAR </strong></h3>
+                    @foreach (var item in Model.Deger4)
+                    {
+                        <ul class="comment-list">
+                            <li>
+                                <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                                <div class="desc">
+                                    <p> <strong> @item.KullaniciAdi : </strong> @item.Yorum</p>
+                                </div>
+                            <li><a href="/Blog/BlogDetay/@item.BlogId">@item.Blog.Baslik</a></li>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    }
+                    @*@foreach (var item in Model.Deger4)
+                        {
+                            <ul>
+                                <li>@item.KullaniciAdi : @item.Yorum</li>
+                            </ul>
+                        }*@
                 </div>
                 <div class="clearfix"></div>
             </div>
