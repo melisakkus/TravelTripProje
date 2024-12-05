@@ -1,0 +1,36 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model Blog
+@{
+    ViewBag.Title = "BlogGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Blog Güncelleme</h4>
+
+<form method="post" class="form-group">
+    <br />
+    <label><strong>Id</strong></label>
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control" , @readonly = "readonly" })
+    <br />
+
+    <label><strong>Başlık</strong></label>
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+
+    <label><strong>Tarih</strong></label>
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+
+    <label><strong>Açıklama</strong></label>
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control", rows = 15, cols = 50 })
+    <br />
+
+    <label><strong>Resim</strong></label>
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-warning">Güncelle</button>
+</form>
+
+
+
