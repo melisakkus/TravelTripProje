@@ -1,0 +1,23 @@
+﻿@model TravelTripProje.Models.Siniflar.Yorumlar
+
+
+<div class="content-form">
+    <h3>Bir yorum bırakın</h3>
+
+    <form method="post" action="YorumYap/Index">
+
+        @Html.LabelFor(x => x.BlogId)
+        @Html.TextBoxFor(x => x.BlogId)
+        <br />
+        @Html.LabelFor(x => x.KullaniciAdi)
+        @Html.TextBoxFor(x => x.KullaniciAdi)
+        <br />
+        @Html.LabelFor(x => x.Mail)
+        @Html.TextBoxFor(x => x.Mail)
+        <br />
+        @Html.LabelFor(x => x.Yorum)
+        @Html.TextAreaFor(x => x.Yorum)
+        <button class="btn btn-primary">Gönder</button>
+        <br />
+    </form>
+</div>

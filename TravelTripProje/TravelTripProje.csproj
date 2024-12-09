@@ -131,7 +131,9 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\GirisYapController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\YorumController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -194,6 +196,10 @@
     <Content Include="web2\js\move-top.js" />
     <Content Include="web2\single.html" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="weblogin Tema\css\style.css" />
+    <Content Include="weblogin Tema\images\b4.jpg" />
+    <Content Include="weblogin Tema\index.html" />
+    <Content Include="weblogin Tema\w3layouts-License.txt" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="web\css\slider.css" />
@@ -272,6 +278,15 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\YeniBlog.cshtml" />
     <Content Include="Views\Admin\BlogGuncelle.cshtml" />
+    <Content Include="Views\YorumYap\Index.cshtml" />
+    <Content Include="Views\Blog\YorumYap.cshtml" />
+    <Content Include="Views\Yorum\Index.cshtml" />
+    <Content Include="Views\Yorum\YorumGuncelle.cshtml" />
+    <Content Include="Views\Yorum\YorumGetir.cshtml" />
+    <Content Include="Views\Yorum\YorumGoruntule.cshtml" />
+    <Content Include="weblogin Tema\fonts\Asap-Regular.ttf" />
+    <Content Include="weblogin Tema\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\GirisYap\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

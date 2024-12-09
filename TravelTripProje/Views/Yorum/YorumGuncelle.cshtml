@@ -1,0 +1,30 @@
+﻿@model TravelTripProje.Models.Siniflar.Yorumlar
+@{
+    ViewBag.Title = "YorumGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yorum Güncelle</h2>
+
+@using (Html.BeginForm("YorumGüncelle", "Admin", FormMethod.Post))
+{
+
+    <input type="text" name="Id" value="@Model.Id" class="form-control" />
+    <br />
+    <input type="text" name="BlogId" value="@Model.BlogId" class="form-control" />
+    <label>Kullanıcı Ad</label>
+    <input type="text" name="KullaniciAdi" value="@Model.KullaniciAdi" class="form-control" />
+    <br />
+    <label>Mail</label>
+    <input type="text" name="Mail" value="@Model.Mail" class="form-control" />
+    <br />
+    <label>Yorum</label>
+    <input type="text" name="Yorum" value="@Model.Yorum" class="form-control" />
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+
+
+}
+
+
+

@@ -46,10 +46,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 @foreach (var item in Model.Deger1)
                 {
                     <div class="single-grid">
-                        <img src="@item.BlogImage" alt="" style="margin-bottom:20px" />
+                        <img src="@item.BlogImage" alt="" style="margin-bottom: 20px; width: 800px; height: 400px;" />
+                        <br />
                         <a href="/Blog/BlogDetay/@item.Id">@item.Baslik</a>
                         <p>
-                            @item.Aciklama
+                            @item.Aciklama.Substring(0, 563)...
                         </p>
                         <p>Yayınlanma Tarihi : @item.Tarih.ToShortDateString() </p>
                         <br />
@@ -75,7 +76,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                 </div>
                 <div class="comments">
-                    <h3><strong> YORUMLAR </strong></h3>
+                    <h3><strong> SON YORUMLAR </strong></h3>
                     @foreach (var item in Model.Deger4)
                     {
                         <ul class="comment-list">
@@ -84,17 +85,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="desc">
                                     <p> <strong> @item.KullaniciAdi : </strong> @item.Yorum</p>
                                 </div>
-                            <li><a href="/Blog/BlogDetay/@item.BlogId">@item.Blog.Baslik</a></li>
                             </li>
+                            <li><a href="/Blog/BlogDetay/@item.BlogId">@item.Blog.Baslik</a></li>
                         </ul>
                         <div class="clearfix"></div>
                     }
-                    @*@foreach (var item in Model.Deger4)
-                        {
-                            <ul>
-                                <li>@item.KullaniciAdi : @item.Yorum</li>
-                            </ul>
-                        }*@
+
                 </div>
                 <div class="clearfix"></div>
             </div>

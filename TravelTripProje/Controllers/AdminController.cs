@@ -7,6 +7,7 @@ using TravelTripProje.Models.Siniflar;
 
 namespace TravelTripProje.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         Context context = new Context();

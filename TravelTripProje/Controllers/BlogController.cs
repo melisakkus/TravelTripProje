@@ -29,5 +29,20 @@ namespace TravelTripProje.Controllers
             //var blogs = context.Blogs.Where(x=>x.Id == id).ToList();
             //return View(blogs);
         }
+
+        [HttpGet]
+        public PartialViewResult YorumYap(int id)
+        {
+            ViewBag.deger = id;
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult YorumYap(Yorumlar y)
+        {
+            context.Yorumlars.Add(y);
+            context.SaveChanges();
+            return PartialView();
+        }
     }
 }

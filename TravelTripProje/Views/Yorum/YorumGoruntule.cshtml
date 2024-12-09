@@ -1,0 +1,23 @@
+﻿@model TravelTripProje.Models.Siniflar.Yorumlar
+
+@{
+    ViewBag.Title = "YorumGoruntule";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("YorumGuncelle", "Yorum", FormMethod.Post))
+{
+    <input type="hidden" name="Id" value="@Model.Id" class="form-control" />
+    <br />
+    <input type="hidden" name="BlogId" value="@Model.BlogId" class="form-control" />
+    <label>Kullanıcı Ad</label>
+    <input type="text" name="KullaniciAdi" value="@Model.KullaniciAdi" class="form-control" readonly style="width: 600px; " />
+    <br />
+    <label>Mail</label>
+    <input type="text" name="Mail" value="@Model.Mail" class="form-control" readonly style="width: 600px; " />
+    <br />
+    <label>Yorum</label>
+    @Html.TextAreaFor(x=>x.Yorum,10,1, new {@class="form-control"})
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+}
