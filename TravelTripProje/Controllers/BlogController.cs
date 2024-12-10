@@ -14,9 +14,9 @@ namespace TravelTripProje.Controllers
 
         public ActionResult Index()
         {
-            blogYorum.Deger1 = context.Blogs.ToList();
+            blogYorum.Deger1 = context.Blogs.OrderByDescending(x => x.Tarih).ToList();
             blogYorum.Deger3 = context.Blogs.OrderByDescending(x=>x.Tarih).Take(3).ToList();
-            blogYorum.Deger4 = context.Yorumlars.Take(3).ToList();
+            blogYorum.Deger4 = context.Yorumlars.OrderByDescending(x => x.Id).Take(3).ToList();
             //var values = context.Blogs.ToList();
             return View(blogYorum);
         }

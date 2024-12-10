@@ -14,22 +14,24 @@
                 <div class="indent">
                     <h2 class="indent-left margin-bot" style="margin-left:80px">Tatil & Seyahat Hakkında</h2>
                     <div class="banner-left">
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/glass.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Restoranlar</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
+
                         <div class="con-text">
                             <div class="grid1-img">
                                 <img src="~/web/images/flight.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Uçuşlar</p>
+                                <p>Gezilecek Yerler</p>
                             </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/travel-holiday-vacation-310_89073.png" style="width:75px;height:75px" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><i class="fa fa-archive"></i> Kültürel Zenginlikler</p>
+                            </div>
+
                             <div class="clear"></div>
                         </div>
                         <div class="con-text">
@@ -41,16 +43,6 @@
                             </div>
                             <div class="clear"></div>
                         </div>
-                        <div class="con-text">
-                            <div class="grid1-img">
-                                <img src="~/web/images/key.png" alt="">
-                            </div>
-                            <div class="grid1-desc">
-                                <p>Araba Kirala</p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="clear"></div>
                     </div>
                     <div class="header_bottom_right_images">
                         <div class="slider" style="width:650px; height:360px">
@@ -75,17 +67,21 @@
         <div class="wrap">
             <div class="wrapper">
                 <div class="con-top">
-                    <h3>Tatil Seyahat Bloguma Hoşgeldiniz :)</h3>
-                    <p>Bu site geçmiş yıllarda deneyimlediğim yurtiçi / yurtdışı gezilerimi paylaşmak için tamamen kendim yaptığım MVC5 üzerine kurulu dinamik bir web projesidir. Umarım okumaktan keyif alır ve yorumlarınızı benimle paylaşırsınız.</p>
+                    <h3>Tatil Seyahat Bloguma Hoşgeldiniz ♥︎</h3>
+                    <div>
+                        <p>
+                            Hoş geldiniz! Önceki yıllarda yurtdışı gezilerimden ilham alarak oluşturduğum bu blog, keşfettiğim şehirlerin tarihini, kültürünü ve atmosferini sizlerle paylaşmak için hazırlandı. Viyana’dan Paris’e, Berlin’den Budapeşte’ye kadar birçok şehirdeki anılarımı, kendi çektiğim fotoğraflarla ve yazılarla aktarıyorum. Her şehir, sadece turistik değil, kültürel ve duygusal açıdan da nasıl bir deneyim sunduğunu keşfetmenizi sağlayacak. Yeni keşifler için hazır mısınız?
+                            </p>
+                    </div>
                 </div>
-                @Html.Action("Partial1","Default")
+                @Html.Action("Partial1", "Default")
                 <div class="grids">
                     <div class="box1">
                         <div class="padding">
-                            @Html.Action("Partial3","Default")
+                            @Html.Action("Partial3", "Default")
                             <a href="/Blog/Index" class="link1">Tüm Blogları Gör...</a>
                         </div>
-                        @Html.Action("Partial4","Default")
+                        @Html.Action("Partial4", "Default")
                         <div class="clear"></div>
                     </div>
                 </div>
